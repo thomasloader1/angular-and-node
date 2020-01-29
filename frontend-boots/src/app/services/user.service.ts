@@ -13,7 +13,7 @@ export class UserService {
   readonly URL_API = 'http://localhost:3000/api/';
 
   constructor(private http: HttpClient) { 
-    this.selectedUser = new User();
+    this.selectedUser = new User('','','','','');
   }
 
   getUsers(){

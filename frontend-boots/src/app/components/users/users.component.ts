@@ -17,6 +17,7 @@ export class UsersComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.getUsers();
   }
 
   addUser(form: NgForm){
@@ -28,11 +29,19 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  getUsers(){
+    this.userService.getUsers()
+    .subscribe(res => {
+      this.userService.users = res as User[];
+      console.log(res);
+    })
+  }
+
 
   resetForm(form?: NgForm){
     if(form){
       form.reset();
-      this.userService.selectedUser = new User();
+      this.userService.selectedUser = new User("","","","","");
     }
   }
 }

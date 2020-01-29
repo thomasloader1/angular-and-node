@@ -6,14 +6,14 @@ export class User{
             isClient,
             entity='',
             email='',
-            type=''
+           // type=''
         ){
             this._id = _id;
             this.name = name;
             this.isClient = isClient;
             this.entity = entity;
             this.email = email;
-            this.type = type;
+            //this.type = type;
         }
         
     _id: string;
@@ -21,5 +21,5 @@ export class User{
     isClient: boolean;
     entity: string;
     email: string;
-    type: string;
+   // type: string;
 }

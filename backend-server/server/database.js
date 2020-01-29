@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://tomas-gomez:thomasloader2323@clustertaskter-vrhoy.gcp.mongodb.net/tasker-app?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://tomas-gomez:tomascapo123@clustertaskter-vrhoy.gcp.mongodb.net/tasker-app?retryWrites=true&w=majority', {
         useCreateIndex: true,
         useNewUrlParser: true,
         useFindAndModify: false,

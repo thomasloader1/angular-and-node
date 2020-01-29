@@ -49,19 +49,18 @@
             </div>
         </div>
         <div class="col-md-7">
-            <div class="card">
+
+            <!--             <div class="card">
                 <div class="card-header text-center">
                     <h4 class="card-title mb-0">Solicitar trabajo</h4>
                 </div>
                 <div class="card-body">
-                    <form #workForm="ngForm" (ngSubmit)="addUser(workForm)">
+                    <form #workForm="ngForm" (ngSubmit)="addWork(workForm)">
                         <div class="form-group">
                             <label>Nombre:</label>
                             <input type="text" name="name" #name="ngModel" [(ngModel)]="userService.selectedUser.name" class="form-control" placeholder="Nombre">
                         </div>
-
                         <div class="form-group">
-
                             <label>Es actualmente cliente?</label>
                             <select name="isClient" #isClient="ngModel" [(ngModel)]="userService.selectedUser.isClient" class="custom-select" id="isClient">
                                     <option selected>Seleccione una opcion</option>
@@ -69,7 +68,6 @@
                                     <option value="true" selected>Si, </option>
                                 </select>
                         </div>
-
                         <div class="form-group">
                             <label>Tipo de entidad:</label>
                             <select name="entity" #entity="ngModel" [(ngModel)]="userService.selectedUser.entity" class="custom-select" id="entity">
@@ -78,27 +76,31 @@
                                 <option value="client-counter">Cliente mostrador</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label>Correo Electronico</label>
                             <input type="email" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email" class="form-control" placeholder="Correo Electronico">
                         </div>
-
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Example file input</label>
                             <input type="file" class="form-control-file" id="exampleFormControlFile1">
                         </div>
-
                         <div class="form-group d-flex justify-content-between px-2">
                             <button class="btn btn-secondary" (click)="resetForm(userForm)">Resetear</button>
-
                             <button class="btn btn-success" type="submit">Guardar</button>
-
                         </div>
-
-
                     </form>
                 </div>
+            </div> -->
+
+            <div class="container">
+                <ul>
+                    <li ng-for="let user of UserService.users">
+                        <p>{{user.name}}</p>
+                    </li>
+                </ul>
             </div>
+
+
+
         </div>
     </div>
